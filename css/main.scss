@@ -1,0 +1,171 @@
+// default propartys
+$peach-color: #ee8760;
+$violet-color: #7569d1;
+$darkblack-color: #22242b;
+$lightblack-color: #292d38;
+$font-family: "gilroy", sans-serif;
+
+a {
+  text-decoration: none;
+}
+
+.fas,
+i > * {
+  color: $violet-color;
+}
+
+input {
+  background-color: $lightblack-color;
+  color: white;
+  font-family: $font-family;
+  outline: none;
+}
+
+li {
+  margin: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "gilroy", sans-serif;
+  background-color: $lightblack-color;
+  display: flex;
+  color: #fff;
+}
+
+.icon-button {
+  color: $violet-color;
+  padding: 1.2em;
+  height: 1em;
+  width: 1em;
+  //   border: 1px solid $violet-color;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.active-btn {
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.616);
+}
+.header {
+  width: 10%;
+  height: 100vh;
+}
+
+.nav {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0.8em;
+}
+
+.menu {
+  list-style-type: none;
+  flex: 1;
+  height: 100%;
+  margin-top: 1.6em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-item {
+  display: block;
+  margin: 0.5em;
+}
+
+.member-section {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0.8em;
+}
+.member {
+  list-style: none;
+  margin-top: 1em;
+}
+.member-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+  padding: 0.3em;
+}
+
+// main
+.main {
+  background-color: $darkblack-color;
+  height: 100vh;
+  flex: 1;
+}
+
+// search bar
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  align-items: center;
+  gap: 1em;
+}
+
+.folder-selector {
+  display: flex;
+  gap: 1em;
+}
+
+.folder-selector,
+select {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: $font-family;
+}
+.folder-selector option {
+  background-color: black;
+  border: none;
+  outline: none;
+}
+
+.searchbar-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-input {
+  padding: 1em 3em;
+  padding-left: 3em;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  flex: 1;
+}
+
+.search-input-container {
+  position: relative;
+  flex: 1;
+}
+
+.search-input-container i {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+.searchbar-btns {
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+// profile
+.profile {
+  width: 26%;
+  height: 100vh;
+}
