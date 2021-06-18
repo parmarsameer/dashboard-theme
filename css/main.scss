@@ -25,6 +25,41 @@ li {
   margin: 0;
 }
 
+button {
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+.progress {
+  position: relative;
+  height: 7px;
+  width: 100%;
+  border: 1px solid $violet-color;
+  background: $darkblack-color;
+  border-radius: 15px;
+}
+.progress-color {
+  position: absolute;
+  background-color: $peach-color;
+  width: 15px;
+  left: 0;
+  height: 5px;
+  border-radius: 15px;
+  animation: progres 4s infinite linear;
+}
+
+.progress-color::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  display: block;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: white;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -164,6 +199,54 @@ select {
   justify-content: center;
 }
 
+//main-containt
+
+.main-contant {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 1.5em 1.5em 1.5em;
+}
+
+.huge-title {
+  padding: 1rem 0;
+  font-size: 2.5rem;
+  font-weight: 400;
+  span {
+    font-weight: 800;
+  }
+}
+.projects-cards {
+  padding: 1.8rem 0rem;
+}
+
+.projects-card {
+  background-color: $lightblack-color;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.616);
+  gap: 2em;
+  min-height: 10rem;
+}
+.project-card_title {
+  font-size: 1.2rem;
+}
+.project-card_subtitle {
+  padding-top: 1em;
+  font-size: 0.9rem;
+}
+.project-crad_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card-button {
+  border-radius: 1rem;
+  background: #7569d155;
+  color: rgb(151, 144, 206);
+
+  padding: 0.5em 1em;
+}
 // profile
 .profile {
   width: 26%;
