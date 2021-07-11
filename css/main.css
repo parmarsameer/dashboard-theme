@@ -94,7 +94,9 @@ body {
 }
 
 .header {
-  width: 10%;
+  display: block;
+  width: 100px;
+  min-width: 70px;
   height: 100vh;
 }
 
@@ -217,6 +219,10 @@ select {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.profile-button {
+  display: none;
 }
 
 .search-input {
@@ -345,6 +351,11 @@ select {
   height: 50px;
   border-radius: 50%;
   border: 0.2em solid #292d38;
+}
+
+.smaller {
+  width: 40px;
+  height: 40px;
 }
 
 .card-member_items:nth-of-type(2) {
@@ -489,6 +500,9 @@ select {
   min-height: 8rem;
   max-width: 20rem;
   margin-bottom: 1em;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 .roadmap-card_subtitle {
@@ -781,5 +795,43 @@ select {
 
 .card-msg_input i {
   color: grey;
+}
+
+@media screen and (max-width: 900px) {
+  .profile-button {
+    display: block;
+  }
+  .profile {
+    position: absolute;
+    top: -200%;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  .showprofile {
+    position: absolute;
+    top: 0;
+  }
+  .roadmap-card {
+    gap: 1rem;
+    padding: .6rem;
+  }
+  .projects-card {
+    gap: 1rem;
+    padding: .6rem;
+  }
+  .card-member_img {
+    height: 30px;
+    width: 30px;
+  }
+  .smaller {
+    height: 30px;
+    width: 30px;
+  }
+  .large-card {
+    max-width: 20rem;
+  }
+  .large-card .card-title {
+    font-size: .9rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
