@@ -204,7 +204,7 @@ select {
 .main-contant {
   display: flex;
   justify-content: space-between;
-  padding: 2em 1.5em 1.5em 1.5em;
+  padding: 2em 1.5em 0em 1.5em;
 }
 
 .huge-title {
@@ -216,7 +216,16 @@ select {
   }
 }
 .projects-cards {
-  padding: 1.8rem 0rem;
+  padding: 1rem;
+  padding-left: 0em;
+  overflow-y: scroll;
+  max-height: 22rem;
+  scroll-snap-stop: start;
+  scroll-snap-type: mandatory;
+  scroll-snap-align: center;
+}
+.projects-cards::-webkit-scrollbar {
+  display: none;
 }
 
 .projects-card {
@@ -224,9 +233,11 @@ select {
   padding: 1rem;
   border-radius: 1rem;
   display: flex;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.616);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.416);
   gap: 2em;
   min-height: 10rem;
+  max-width: 22rem;
+  margin-bottom: 1em;
 }
 .project-card_title {
   font-size: 1.2rem;
@@ -247,8 +258,346 @@ select {
 
   padding: 0.5em 1em;
 }
+
+.card-member {
+  list-style: none;
+  margin-top: 1em;
+}
+
+.card-member_items {
+  display: inline;
+}
+
+.card-member_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0.2em solid $lightblack-color;
+}
+
+.card-member_items:nth-of-type(2) {
+  position: relative;
+  left: -25px;
+}
+
+.card-member_items:nth-of-type(3) {
+  position: relative;
+  left: -50px;
+}
+
+.large-card {
+  background-color: $lightblack-color;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  min-height: 8rem;
+  max-width: 28rem;
+  gap: 1rem;
+  align-items: center;
+  .tag-title {
+    color: $violet-color;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+  .card-title {
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  .accent-button {
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    background-color: #ee876011;
+    color: $peach-color;
+    font-weight: 600;
+    cursor: pointer;
+    border: 0px solid $peach-color;
+    transition: ease-in-out all 0.5s;
+    letter-spacing: 1px;
+  }
+  .accent-button:hover,
+  .accent-button:focus {
+    background-color: #7569d111;
+    color: white;
+  }
+  .img {
+    justify-self: center;
+  }
+  .img i {
+    font-size: 5rem;
+  }
+
+  .bottom-section {
+    margin: 1em 0em 0em 0em;
+  }
+}
+
+.roadmap-container {
+  margin: 2em 0em 0em 0em;
+}
+
+.roadmap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.roadmap-icons > i {
+  color: gray;
+}
+.roadmap-icon {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+
+.roadmap-container > p {
+  font-size: 0.6em;
+  color: gray;
+}
+
+.roadmap-top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid $violet-color;
+}
+
+.roadmap-time {
+  display: block;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.roadmap-time > p {
+  font-size: 0.6em;
+  color: gray;
+}
+
+.roadmap-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: $lightblack-color;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.416);
+  gap: 2em;
+  min-height: 8rem;
+  max-width: 20rem;
+  margin-bottom: 1em;
+}
+
+.roadmap-card_subtitle {
+  font-size: 0.6em;
+}
+
+.roadmap-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.roadmap-bottom > .roadmap-card {
+  margin-top: 1em;
+}
+
 // profile
 .profile {
   width: 26%;
   height: 100vh;
+}
+
+.profile-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em;
+}
+
+.profile-nav > i {
+  color: grey;
+}
+
+.profile-main_containt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+.profile-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.profile-pic {
+  background-color: $darkblack-color;
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.profile-pic > i {
+  font-size: 2em;
+  color: white;
+}
+
+.plus {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.profile-username {
+  margin-top: 0em 0em;
+  justify-content: center;
+}
+
+.profile-username > h3 {
+  font-weight: 500;
+}
+.profile-username > p {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.profile-middle {
+  display: flex;
+  margin: 1em 2em;
+  gap: 1.5em;
+}
+
+.profile-middle p {
+  font-size: 0.8em;
+}
+
+.profile-middle h4 {
+  text-align: center;
+}
+
+.profile-bottom {
+  background-color: $darkblack-color;
+  border-radius: 0.8em;
+  width: 14.5em;
+  height: 3.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-page {
+  padding: 1em;
+  font-size: 0.8em;
+  background-color: #ee876011;
+  color: $peach-color;
+  border-radius: 0.8em;
+}
+.team-page:hover,
+.team-page:focus {
+  background-color: #7569d111;
+  color: white;
+}
+.pearsonal-page {
+  padding: 1em;
+  font-size: 0.8em;
+}
+
+.profile-card {
+  background-color: $darkblack-color;
+  width: 14.5em;
+  height: 18em;
+  border-radius: 1.5em;
+  margin: 1em 0em 0em 0em;
+}
+
+.dropdown-menu,
+select {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: $font-family;
+}
+.dropdown-menu option {
+  background-color: black;
+  border: none;
+  outline: none;
+}
+
+.dropdown-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8em 2em 0.8em 2em;
+}
+
+.chat {
+  display: flex;
+  align-items: center;
+  margin: 0em 1em;
+  border-bottom: 2px solid $lightblack-color;
+  padding-bottom: 0.5em;
+}
+
+.chat p {
+  font-size: 0.8em;
+}
+
+.msg-1 {
+  display: flex;
+  align-items: center;
+  margin: 0.5em 0em 0em 1em;
+}
+
+.msg-1 p {
+  background-color: $lightblack-color;
+  padding: 0.5em;
+  border-radius: 0.8em 0.8em 0.8em 0em;
+  margin: 0em 0em 0em 0.5em;
+  font-size: 0.8em;
+}
+
+.after-msg1 {
+  font-size: 0.6em;
+  margin: 0em 0em 0em 8em;
+}
+
+.msg-2 {
+  display: flex;
+  align-items: center;
+  margin: 0.5em 0em 0em 1em;
+}
+
+.msg-2 p {
+  background-color: $violet-color;
+  padding: 0.5em;
+  border-radius: 0.8em 0.8em 0em 0.8em;
+  margin: 0em 0em 0em 0.5em;
+  font-size: 0.8em;
+}
+
+.card-msg_input {
+  margin: 0.8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.msg-input {
+  border: none;
+  border-radius: 0.5em;
+  width: 10em;
+  padding: 0.5em 1em;
+}
+
+.card-msg_input i {
+  color: grey;
 }
